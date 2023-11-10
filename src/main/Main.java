@@ -1,16 +1,26 @@
 package main;
 
-import service.BonusMilesService;
+import service.BmiService;
 
 public class Main {
     public static void main(String[] args) {
-        BonusMilesService service = new BonusMilesService();
-        int privetcena = 10000;
-        int bonusCalc = 20;
-        int miles = service.calculate(price, bonusCalc); // должно получиться 500
-        System.out.println(miles);
+        BmiService service = new BmiService();
+        double height = 1.87;
+        double weight = 98;
+        int bmi = (int) service.calculate(height, weight);
+        System.out.println("Индекс массы тела: " + bmi);
     }
 }
+
+//public class Main {
+//    public static void main(String[] args) {
+//        BonusMilesService service = new BonusMilesService();
+//        int price = 10000;
+//        int bonusCalc = 20;
+//        int miles = service.calculate(price, bonusCalc); // должно получиться 500
+//        System.out.println(miles);
+//    }
+//}0
 
 //        CalcService distr = new CalcService();
 //
